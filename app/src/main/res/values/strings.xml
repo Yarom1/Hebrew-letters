@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">אלף־בית</string>
+
+    <!-- Home screen (big kid-facing labels carry niqqud) -->
+    <string name="home_title">אָלֶף־בֵּית</string>
+    <string name="home_subtitle">בּוֹאוּ נִלְמַד אוֹתִיּוֹת!</string>
+    <string name="mode_write">כְּתִיבָה</string>
+    <string name="mode_write_sub">כותבים את האות עם האצבע</string>
+    <string name="mode_listen">שְׁמִיעָה</string>
+    <string name="mode_listen_sub">נוגעים באות ושומעים איך קוראים לה</string>
+    <string name="mode_words">מִלִּים</string>
+    <string name="mode_words_sub">מילים שמתחילות באות</string>
+
+    <!-- Letter picker -->
+    <string name="choose_letter">בַּחֲרוּ אוֹת</string>
+    <string name="touch_letter">גְּעוּ בְּאוֹת 👇</string>
+    <string name="stars_count">⭐ %1$d/%2$d</string>
+
+    <!-- What the phone says. %1$s is the letter name, e.g. אָלֶף -->
+    <string name="say_letter">הָאוֹת %1$s</string>
+    <string-array name="praise">
+        <item>כָּל הַכָּבוֹד!</item>
+        <item>מְצוּיָּן!</item>
+        <item>יוֹפִי!</item>
+        <item>נֶהְדָּר!</item>
+        <item>אֵיזֶה יוֹפִי!</item>
+    </string-array>
+
+    <!-- Tracing screen -->
+    <string name="again">שׁוּב</string>
+    <string name="to_next_letter">הָאוֹת הַבָּאָה</string>
+    <string name="trace_hint">כִּתְבוּ עַל הָאוֹת עִם הָאֶצְבַּע ✏️</string>
+    <string name="color_n">צבע %1$d</string>
+    <string name="trace_description">משטח כתיבה של האות %1$s</string>
+
+    <!-- Words screen -->
+    <string name="hear_word">🔊 שִׁמְעוּ</string>
+    <string name="another_word">🔄 מִלָּה אַחֶרֶת</string>
+
+    <!-- Buttons (screen reader descriptions) -->
+    <string name="back">חזרה</string>
+    <string name="prev_letter">האות הקודמת</string>
+    <string name="next_letter">האות הבאה</string>
+    <string name="speak">השמעה</string>
+    <string name="clear">מחיקה</string>
+    <string name="settings">הגדרות</string>
+
+    <string name="volume_off">🔇 הקול כבוי – הגבירו את עוצמת השמע</string>
+
+    <!-- Voice problems (parent-facing) -->
+    <string name="voice_problem_title">אין קול בעברית 🔇</string>
+    <string name="voice_missing_data">צריך להוריד את הקול בעברית למנוע הדיבור של הטלפון.\n\nלחצו על \"התקנת קול בעברית\", בחרו עברית והורידו אותה.</string>
+    <string name="voice_no_hebrew">מנוע הדיבור של הטלפון לא תומך בעברית.\n\nמומלץ להתקין את \"Speech Services by Google\" (שירותי דיבור של Google) מחנות Play, לבחור בו ב\"הגדרות קול\" ולהוריד את השפה עברית.</string>
+    <string name="voice_no_engine">לא נמצא בטלפון מנוע דיבור (Text-to-Speech).\n\nמומלץ להתקין את \"Speech Services by Google\" (שירותי דיבור של Google) מחנות Play.</string>
+    <string name="install_voice">התקנת קול בעברית</string>
+    <string name="voice_settings">הגדרות קול</string>
+    <string name="close">סגירה</string>
+    <string name="cannot_open">לא ניתן לפתוח את המסך הזה בטלפון הזה</string>
+
+    <!-- Parents' settings -->
+    <string name="settings_title">הגדרות להורים</string>
+    <string name="voice_status_ready">✅ הקול בעברית מוכן\n%1$s</string>
+    <string name="voice_status_starting">⏳ מנוע הדיבור עדיין עולה…</string>
+    <string name="voice_status_problem">⚠️ אין כרגע קול בעברית</string>
+    <string name="test_voice">🔊 בדיקת קול</string>
+    <string name="speech_rate">מהירות הדיבור</string>
+    <string name="rate_slow">איטית</string>
+    <string name="rate_normal">רגילה</string>
+    <string name="phone_voice_settings">הגדרות הקול של הטלפון</string>
+    <string name="reset_stars">איפוס הכוכבים ⭐</string>
+    <string name="stars_reset_done">הכוכבים אופסו</string>
+    <string name="test_sentence">שָׁלוֹם! בּוֹאוּ נִלְמַד אֶת הָאוֹתִיּוֹת.</string>
+    <string name="about">גרסה %1$s · גופן Rubik (SIL Open Font License)</string>
+</resources>

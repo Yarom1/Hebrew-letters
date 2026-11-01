@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Header for the writing and words screens:
+  [back]   [previous] (letter) [next]   [speak]
+  The app forces right-to-left layout, so "back" sits on the right and the
+  "next letter" arrow points left, the way Hebrew reads.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="84dp"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/RoundButton"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_back" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/btn_prev"
+        style="@style/RoundButton"
+        android:contentDescription="@string/prev_letter"
+        android:src="@drawable/ic_prev" />
+
+    <TextView
+        android:id="@+id/letter_chip"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        style="@style/RoundButton"
+        android:contentDescription="@string/next_letter"
+        android:src="@drawable/ic_next" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/btn_speak"
+        style="@style/RoundButton"
+        android:contentDescription="@string/speak"
+        android:src="@drawable/ic_volume" />
+
+</LinearLayout>

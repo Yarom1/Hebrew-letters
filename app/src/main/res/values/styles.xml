@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/title</item>
+        <item name="android:colorPrimaryDark">@color/bg_home_top</item>
+        <item name="android:colorAccent">@color/mode_write</item>
+        <item name="android:windowBackground">@color/bg_home_top</item>
+        <item name="android:statusBarColor">@color/bg_home_top</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/ink_dark</item>
+        <item name="android:textColor">@color/ink_dark</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+    </style>
+
+    <style name="DialogTheme" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/title</item>
+    </style>
+
+    <!-- Round white icon button used in the headers and tool bars. -->
+    <style name="RoundButton">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/bg_round_button</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <!-- A big tappable card on the home screen. -->
+    <style name="ModeCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">112dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="ModeEmoji">
+        <item name="android:layout_width">76dp</item>
+        <item name="android:layout_height">76dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">44sp</item>
+        <item name="android:background">@drawable/bg_emoji_circle</item>
+        <item name="android:tag">emoji</item>
+    </style>
+
+    <style name="ModeTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ModeSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:alpha">0.95</item>
+    </style>
+
+    <!-- Rounded "pill" text button. -->
+    <style name="PillButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SettingsButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/ink_dark</item>
+        <item name="android:background">@drawable/bg_settings_button</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+</resources>

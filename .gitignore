@@ -1,0 +1,25 @@
+# Build output
+build/
+.gradle/
+*.apk
+!apk/hebrew-letters.apk
+*.idsig
+*.ap_
+*.dex
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing keys: never commit them (this is a public repository)
+keystore/
+*.jks
+*.keystore
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title"
+                android:textColor="@color/title"
+                android:textSize="58sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_subtitle"
+                android:textColor="@color/ink_soft"
+                android:textSize="22sp" />
+
+            <!-- A row of colourful letters; filled in code. Tapping one says its name. -->
+            <LinearLayout
+                android:id="@+id/letter_strip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/card_write"
+                style="@style/ModeCard">
+
+                <TextView
+                    style="@style/ModeEmoji"
+                    android:text="✏️" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ModeTitle"
+                        android:text="@string/mode_write" />
+
+                    <TextView
+                        style="@style/ModeSubtitle"
+                        android:text="@string/mode_write_sub" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_listen"
+                style="@style/ModeCard">
+
+                <TextView
+                    style="@style/ModeEmoji"
+                    android:text="🔊" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ModeTitle"
+                        android:text="@string/mode_listen" />
+
+                    <TextView
+                        style="@style/ModeSubtitle"
+                        android:text="@string/mode_listen_sub" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_words"
+                style="@style/ModeCard">
+
+                <TextView
+                    style="@style/ModeEmoji"
+                    android:text="🦁" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/ModeTitle"
+                        android:text="@string/mode_words" />
+
+                    <TextView
+                        style="@style/ModeSubtitle"
+                        android:text="@string/mode_words_sub" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_settings"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="10dp"
+        android:alpha="0.7"
+        android:background="@drawable/bg_round_button"
+        android:contentDescription="@string/settings"
+        android:scaleType="center"
+        android:src="@drawable/ic_settings" />
+
+</FrameLayout>

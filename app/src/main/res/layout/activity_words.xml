@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mode_words_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_letter_nav" />
+
+    <LinearLayout
+        android:id="@+id/word_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_card"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/word_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:tag="emoji"
+            android:textSize="150sp" />
+
+        <TextView
+            android:id="@+id/word_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="@color/ink_dark"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <!-- One dot per word of this letter; filled in code. -->
+        <LinearLayout
+            android:id="@+id/word_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="18dp">
+
+        <Button
+            android:id="@+id/btn_say_word"
+            style="@style/PillButton"
+            android:text="@string/hear_word"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_another"
+            style="@style/PillButton"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/bg_pill_white"
+            android:text="@string/another_word"
+            android:textColor="@color/ink_dark" />
+    </LinearLayout>
+
+</LinearLayout>

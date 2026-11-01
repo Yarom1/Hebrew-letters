@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ink_dark">#2B2D42</color>
+    <color name="ink_soft">#5C5F7A</color>
+    <color name="title">#5F3DC4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card">#FFFFFF</color>
+
+    <color name="bg_home_top">#FFF3BF</color>
+    <color name="bg_home_bottom">#E7F5FF</color>
+
+    <color name="mode_write">#F76707</color>
+    <color name="mode_write_light">#FF922B</color>
+    <color name="mode_write_bg">#FFF4E6</color>
+
+    <color name="mode_listen">#1C7ED6</color>
+    <color name="mode_listen_light">#4DABF7</color>
+    <color name="mode_listen_bg">#E7F5FF</color>
+
+    <color name="mode_words">#2F9E44</color>
+    <color name="mode_words_light">#51CF66</color>
+    <color name="mode_words_bg">#EBFBEE</color>
+
+    <color name="success">#2F9E44</color>
+    <color name="star">#FAB005</color>
+
+    <color name="icon_bg_top">#845EF7</color>
+    <color name="icon_bg_bottom">#5F3DC4</color>
+    <color name="icon_shadow">#4527A0</color>
+</resources>
