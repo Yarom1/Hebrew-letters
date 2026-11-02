@@ -155,7 +155,7 @@ public class LetterGridActivity extends BaseActivity {
         Alphabet.Letter letter = Alphabet.get(index);
         spotLetter.setText(letter.glyph);
         spotLetter.setTextColor(Ui.letterColor(index));
-        spotName.setText(letter.name);
+        spotName.setText(Alphabet.forDisplay(letter.name));
     }
 
     private final class LetterAdapter extends BaseAdapter {

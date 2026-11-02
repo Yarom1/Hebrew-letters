@@ -82,6 +82,29 @@ public class AppTest {
     }
 
     @Test
+    public void qofIsShownWithHolamAndSpokenWithTheNormalSpelling() {
+        hebrewVoiceReady();
+        LetterGridActivity grid = Robolectric.buildActivity(LetterGridActivity.class,
+                LetterGridActivity.intent(context(), LetterGridActivity.MODE_LISTEN)).setup().get();
+        clickItem((GridView) grid.findViewById(R.id.grid), 18); // ק
+        assertEquals("ק\uFB4Bף", ((TextView) grid.findViewById(R.id.spot_name)).getText().toString());
+        assertEquals("הָאוֹת קוֹף", lastSpoken());
+
+        WordsActivity words = Robolectric.buildActivity(WordsActivity.class,
+                WordsActivity.intent(context(), 18)).setup().get();
+        assertEquals("ק\uFB4Bף", ((TextView) words.findViewById(R.id.word_text)).getText().toString());
+        assertEquals("קוֹף", lastSpoken());
+
+        TraceActivity trace = Robolectric.buildActivity(TraceActivity.class,
+                TraceActivity.intent(context(), 18)).setup().get();
+        assertEquals("ק\uFB4Bף", ((TextView) trace.findViewById(R.id.letter_name)).getText().toString());
+
+        MainActivity home = Robolectric.buildActivity(MainActivity.class).setup().get();
+        String subtitle = ((TextView) home.findViewById(R.id.subtitle)).getText().toString();
+        assertTrue(subtitle, subtitle.contains("\uFB4B") && !subtitle.contains("\u05D5\u05B9"));
+    }
+
+    @Test
     public void writingModeOpensTheTracingScreen() {
         LetterGridActivity grid = Robolectric.buildActivity(LetterGridActivity.class,
                 LetterGridActivity.intent(context(), LetterGridActivity.MODE_WRITE)).setup().get();

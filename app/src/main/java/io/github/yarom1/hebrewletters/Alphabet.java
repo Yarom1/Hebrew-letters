@@ -131,12 +131,29 @@ final class Alphabet {
         return ((index % n) + n) % n;
     }
 
+    /** Vav followed by holam (holam male), as in קוֹף. */
+    private static final String VAV_HOLAM = "\u05D5\u05B9";
+    /** The same as one character, "HEBREW LETTER VAV WITH HOLAM". */
+    private static final String VAV_HOLAM_PRECOMPOSED = "\uFB4B";
+
+    /**
+     * Prepares text with niqqud for the screen. A holam on a vav is drawn by many fonts (including
+     * ours) beside the top of the vav, where children and parents easily mistake it for a shuruk
+     * (וּ). The precomposed character puts the dot clearly above the vav on every phone. Speech
+     * keeps using the ordinary spelling.
+     */
+    static String forDisplay(String text) {
+        return text.indexOf(VAV_HOLAM) < 0 ? text : text.replace(VAV_HOLAM, VAV_HOLAM_PRECOMPOSED);
+    }
+
     /** Removes niqqud and cantillation marks, e.g. "אַרְיֵה" → "אריה". */
     static String withoutNiqqud(String text) {
         StringBuilder out = new StringBuilder(text.length());
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (!isHebrewMark(c)) {
+            if (c == '\uFB4B') {
+                out.append('ו');
+            } else if (!isHebrewMark(c)) {
                 out.append(c);
             }
         }

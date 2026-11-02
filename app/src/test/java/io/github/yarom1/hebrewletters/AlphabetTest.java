@@ -71,6 +71,15 @@ public class AlphabetTest {
     }
 
     @Test
+    public void holamOnVavIsShownAboveTheVav() {
+        // קוֹף must not look like נוּן: show vav+holam as the single character U+FB4B.
+        assertEquals("ק\uFB4Bף", Alphabet.forDisplay("קוֹף"));
+        assertEquals("נוּן", Alphabet.forDisplay("נוּן"));
+        assertEquals("שׁ\uFB4Bק\uFB4Bלָד", Alphabet.forDisplay("שׁוֹקוֹלָד"));
+        assertEquals("קוף", Alphabet.withoutNiqqud(Alphabet.forDisplay("קוֹף")));
+    }
+
+    @Test
     public void indexesWrapAround() {
         assertEquals("ת", Alphabet.get(-1).glyph);
         assertEquals("א", Alphabet.get(22).glyph);

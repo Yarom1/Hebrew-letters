@@ -123,7 +123,7 @@ public class WordsActivity extends BaseActivity {
     private void showWord(boolean speak) {
         Alphabet.Word word = words[wordIndex];
         emoji.setText(word.emoji);
-        wordText.setText(highlightFirstLetter(word.text, Ui.letterColor(index)));
+        wordText.setText(highlightFirstLetter(Alphabet.forDisplay(word.text), Ui.letterColor(index)));
         wordText.setContentDescription(word.text);
         for (int i = 0; i < dots.getChildCount(); i++) {
             dots.getChildAt(i).setBackground(Ui.circle(

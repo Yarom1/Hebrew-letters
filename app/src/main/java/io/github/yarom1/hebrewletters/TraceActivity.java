@@ -115,7 +115,7 @@ public class TraceActivity extends BaseActivity implements TraceView.Listener {
         chip.setText(letter.glyph);
         chip.setBackground(Ui.touchable(Ui.circle(color)));
         chip.setContentDescription(letter.name);
-        name.setText(letter.name);
+        name.setText(Alphabet.forDisplay(letter.name));
         name.setTextColor(color);
         trace.setGuideColor(color);
         trace.setLetter(letter.glyph);
@@ -176,7 +176,7 @@ public class TraceActivity extends BaseActivity implements TraceView.Listener {
         Prefs.setTraced(this, index);
         String[] praise = getResources().getStringArray(R.array.praise);
         String text = praise[random.nextInt(praise.length)];
-        successText.setText(text);
+        successText.setText(Alphabet.forDisplay(text));
         success.setVisibility(View.VISIBLE);
         Ui.popIn(success, 200);
         confetti.burst();

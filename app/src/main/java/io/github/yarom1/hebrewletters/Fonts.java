@@ -60,6 +60,13 @@ final class Fonts {
                 Typeface current = text.getTypeface();
                 boolean isBold = current != null && current.isBold();
                 text.setTypeface(isBold ? bold(root.getContext()) : medium(root.getContext()));
+                CharSequence content = text.getText();
+                if (content instanceof String) {
+                    String shown = Alphabet.forDisplay((String) content);
+                    if (!shown.equals(content)) {
+                        text.setText(shown);
+                    }
+                }
             }
         } else if (root instanceof ViewGroup) {
             ViewGroup group = (ViewGroup) root;
