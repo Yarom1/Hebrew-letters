@@ -49,6 +49,18 @@ public class ScreenshotTest {
     }
 
     @Test
+    public void launcherIcon() throws IOException {
+        android.graphics.drawable.Drawable icon =
+                RuntimeEnvironment.getApplication().getDrawable(R.mipmap.ic_launcher);
+        Bitmap bitmap = Bitmap.createBitmap(432, 432, Bitmap.Config.ARGB_8888);
+        icon.setBounds(0, 0, 432, 432);
+        icon.draw(new Canvas(bitmap));
+        try (OutputStream out = new FileOutputStream(new File(dir, "0-icon.png"))) {
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
+        }
+    }
+
+    @Test
     public void home() throws IOException {
         Activity a = Robolectric.buildActivity(MainActivity.class).setup().get();
         TestUtil.idleFor(2000);
